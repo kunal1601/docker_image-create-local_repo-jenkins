@@ -30,7 +30,7 @@
          steps {
              sshagent(['QA_env_id']) {
               sh """
-                ssh -o StrictHostKeyChecking=no ec2-user@13.203.101.95 <<EOF
+                ssh -o StrictHostKeyChecking=no ec2-user@3.109.2.10 <<EOF
                 sudo yum install docker -y
                 sudo systemctl stop docker
                 sudo echo '{ "insecure-registries":["172.31.1.249:5000"] }' | sudo tee /etc/docker/daemon.json
